@@ -6,7 +6,7 @@ export default function PostsPage({ posts, user }) {
   const [allPosts, setAllPosts] = useState(posts);
 
   const deleteHandler = async (id) => {
-    await fetch(`/api/posts/delete/${id}`, { method: 'POST' });
+    await fetch(`/api/posts/${id}`, { method: 'DELETE' });
     setAllPosts((prev) => prev.filter((el) => el.id !== id));
   };
 

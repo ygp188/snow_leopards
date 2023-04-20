@@ -9,7 +9,7 @@ export default function PostForm({ setAllPosts }) {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    const response = await fetch('/api/posts/addPost', {
+    const response = await fetch('/api/posts', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify(input),
